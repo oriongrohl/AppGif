@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './home-page.css',
 })
 export class HomePageComponent {
+  // constructor(private gifService: GifsService ) {}
 
+  // get gifs(): Gif[] {
+  //   return this.gifService.listadoGifs;
+  // }
 }

@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { GifsService } from '../../services/gifs';
+import { GifsService } from '../../../gifs/services/gifs';
 
 @Component({
   selector: 'gifs-search-box',
@@ -7,7 +7,7 @@ import { GifsService } from '../../services/gifs';
   templateUrl: './search-box.html',
   styleUrl: './search-box.css',
 })
-export class SearchBoxComponents {
+export class SearchBoxComponent {
 
   @ViewChild('txtInputEtiqueta')
   public inputEtiqueta!: ElementRef<HTMLInputElement>;

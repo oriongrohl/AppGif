@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SearchBoxComponent } from '../shared/components/search-box/search-box';
 import { HomePageComponent } from './pages/home-page/home-page';
-import { SearchBoxComponents } from './components/search-box/search-box';
-import { CardListComponents } from './components/card-list/card-list';
-
+import { CardListComponent } from '../shared/components/card-list/card-list';
 
 
 @NgModule({
   declarations: [
     HomePageComponent,
-    SearchBoxComponents,
-    CardListComponents
+    SearchBoxComponent,
+    CardListComponent
   ],
   imports: [
     CommonModule
