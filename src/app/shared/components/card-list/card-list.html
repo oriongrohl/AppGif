@@ -2,18 +2,15 @@
   <!--  -->
   <!-- RESPONSIVE Pantallas medianas cada columna ocupa 3/12 de pantalla -->
   <!-- Pantallas medianas cada columna ocupa 6/12 de pantalla -->
-  <div class="col-md-3 col-sm-6">
+  <div style = "display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
 
-    <!-- card para hacer "tarjetas" -->
-    <!-- margin-botton 2 -->
-    <!-- background dark -->
-    <div class="card mb-2 text-center bg-dark">
-      <!--  CREAR IMAGEN -->
+    @for (gif of listadoGifs; track $index) {
+      <div class="card" style="width: 18rem;">
+        <img src="{{ gif.images.original.url }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text text-white">
-            Hola Mundo!!!
-          </p>
+          <h5 class="card-title">{{ gif.title }}</h5>
         </div>
-    </div>
+      </div>
+    }
   </div>
 </div>

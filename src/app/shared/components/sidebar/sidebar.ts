@@ -11,4 +11,12 @@ import { GifsService } from '../../../gifs/services/gifs';
 // inyeccion angular del servicio para usarlo en el componente sidebar
 export class SidebarComponent {
   constructor(public gifsService: GifsService) {}
+
+  buscarEtiqueta(input: string) {
+    const valor = input.trim();
+    if (!valor) return;
+    this.gifsService.buscarEtiqueta(valor); // llama al servicio
+    input = '';
+  }
+
 }

@@ -25,7 +25,9 @@ export class GifsService {
     if (this._historialEtiquetas.length==10){
       this._historialEtiquetas.pop()
     }
-    this._historialEtiquetas.unshift(etiqueta) // se mete en el array la etiqueta gracias a unshift
+    if (!this._historialEtiquetas.includes(etiqueta.toLowerCase())) {
+      this._historialEtiquetas.unshift(etiqueta) // se mete en el array la etiqueta gracias a unshift
+    }
 
     console.log(this.historialEtiquetas)
 

@@ -17,12 +17,11 @@ export class SearchBoxComponent {
 
   }
 
-  buscarEtiqueta() {
-    const nuevaEtiqueta = this.inputEtiqueta.nativeElement.value.toLowerCase(); // acceder al valor html y sacar su valor
-    if (!(this.gifsService.historialEtiquetas.includes(nuevaEtiqueta))) {
-      console.log("prueba")
-      this.gifsService.buscarEtiqueta(nuevaEtiqueta); // se agrega la nueva etiqueta a la lista (metodo de gifs.ts)
-      this.inputEtiqueta.nativeElement.value = ""; // se limpia
-    }
+  buscarEtiqueta(input: HTMLInputElement) {
+    const valor = input.value.trim();
+    if (!valor) return;
+    this.gifsService.buscarEtiqueta(valor); // llama al servicio
+    input.value = '';
   }
+
 }

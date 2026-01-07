@@ -4,7 +4,7 @@
 
   <div class = "list-group list-reset">
     @for (item of gifsService.historialEtiquetas; track $index) {
-      <button class ="list-group-item list-group-item-action">
+      <button class ="list-group-item list-group-item-action" (click)="buscarEtiqueta(item)">
         {{ item }}
       </button>
     }
